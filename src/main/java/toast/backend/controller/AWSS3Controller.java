@@ -11,14 +11,9 @@ import toast.backend.service.FileUploadService;
 public class AWSS3Controller {
     private final FileUploadService fileUploadService;
 
-    //이미지 조회
-
     //이미지 업로드
     @PostMapping("/upload")
     public String uploadImage(@RequestPart MultipartFile file){
         return fileUploadService.uploadImage(file);
     }
-
-    //이미지 삭제
-
 }
