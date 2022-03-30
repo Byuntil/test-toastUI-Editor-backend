@@ -15,12 +15,12 @@ public class ToastEntity {
     @Id @GeneratedValue
     private Long id;
 
-    private String contentHtml;
+    private String contentMarkdown;
 
     @Builder
-    public ToastEntity(Long id, String contentHtml) {
+    public ToastEntity(Long id, String contentMarkdown) {
         this.id = id;
-        this.contentHtml = contentHtml;
+        this.contentMarkdown = contentMarkdown;
     }
 
     public ToastEntity() {
