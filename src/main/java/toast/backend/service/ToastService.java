@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import toast.backend.model.ToastEntity;
-import toast.backend.model.ToastEntityDTO;
 import toast.backend.repository.ToastRepository;
 
 @Service
@@ -17,5 +16,9 @@ public class ToastService {
     public Long saveToast(ToastEntity toast){
         toastRepository.save(toast);
         return toast.getId();
+    }
+
+    public ToastEntity findContent(Long id){
+        return toastRepository.findOne(id);
     }
 }

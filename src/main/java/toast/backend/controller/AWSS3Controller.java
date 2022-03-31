@@ -21,6 +21,4 @@ public class AWSS3Controller {
         log.info("S3에 저장되고 나온 이미지 url = {}",url);
         return url;
     }
-
-    //이미지
 }
